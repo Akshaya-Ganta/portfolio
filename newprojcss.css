@@ -1,0 +1,293 @@
+/* Reset & General Styles */
+
+@font-face {
+    font-family: 'SokBrubah';
+    src: url(fonts/Sok\ Brubah.otf);
+}
+@font-face {
+    font-family:'AdoraItalic' ;
+    
+    src: url(fonts/Adora\ Italic.otf);
+}
+@font-face {
+    font-family: 'Retroguard';
+    src: url(fonts/retroguard-qzr0v.otf);
+}
+@font-face {
+    font-family: 'Maco';
+    src: url(fonts/Mauline.otf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Background & Theme */
+body {
+    background-color: #A9C46C;
+    color: white;
+    font-family: "SokBrubah",'sans-serif';
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "sokBrubah",'sansserif';
+    font-size: 2rem;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+   
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F5F5DC;
+    font-weight: bold;
+   font-family:'SokBrubah';
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color:gray;
+}
+
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family:'Retroguard';
+}
+
+.hero-content span {
+    
+    color: black;
+    font-family: "Cedarville Cursive";
+  
+    
+}
+.hero-content h1{
+    animation-name: slide;
+    animation-duration: 1s;
+    
+}
+@keyframes slide{
+    from{
+        transform: translateX(-300px);
+    }
+    to
+    {
+        transform: translateX(0);
+    }
+    
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    opacity: 0.8;
+    font-family: 'Retroguard' ;
+    color: black;
+
+}
+.hero-content img{
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes spin {
+    0%{
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+.hero p {
+    word-spacing: 10px;
+    animation-name: bounce;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+}
+
+@keyframes bounce {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(20px);
+    }
+    
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    background: #FADA7A;
+    color: #0a0a0a;
+    font-family:'Maco';
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+
+.btn:hover {
+    background:#F9CB43;
+}
+.skill:hover{
+    background: #FADA7A;
+}
+
+/* Sections */
+section {
+    padding: 120px 20px;
+}
+
+/* Skills Section */
+
+h2{
+    color: #0a0a0a;
+    font-family: "SokBrubah";
+}
+.skills-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+.me p{
+    padding: 20px 20px;
+    margin: 2px ;
+    height: 80px;
+    
+    background-color: #F5F5DC;
+    border-radius: 20px;
+    font-family: 'AdoraItalic';
+    word-spacing: 10px;
+    color: black;
+}
+
+.skill {
+    background: #F9CB43;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    font-family: 'Maco';
+    color: black;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+/* Services Section */
+.services-container {
+    
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+   
+}
+
+.service {
+    
+    background: #A28B55;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    
+}
+.service h3{
+    font-family: 'SokBrubah';
+}
+.service p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* Portfolio Section */
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.portfolio-item {
+    width: 350px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Contact Section */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+form button {
+    background: #ffcc00;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    padding: 30px;
+    background: #111;
+}
